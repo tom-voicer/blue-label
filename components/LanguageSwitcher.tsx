@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
-import { Languages } from "lucide-react";
 
 export default function LanguageSwitcher() {
   const router = useRouter();
@@ -16,7 +15,6 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-      <Languages className="h-4 w-4 text-muted-foreground" />
       <select
         value={currentLocale}
         onChange={(e) => handleLanguageChange(e.target.value)}
