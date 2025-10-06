@@ -2,17 +2,18 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, DM_Serif_Display } from "next/font/google";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-dm-serif",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export function generateStaticParams() {
@@ -45,7 +46,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as "he" | "en")) {
     notFound();
   }
 
@@ -56,7 +57,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "he" ? "rtl" : "ltr"}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${dmSerifDisplay.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
