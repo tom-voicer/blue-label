@@ -1,0 +1,7 @@
+---
+description: when updating text in either en.json or he.json, please also update the other file.
+globs:
+alwaysApply: true
+---
+
+when updating text in either en.json or he.json, please also update the other file.

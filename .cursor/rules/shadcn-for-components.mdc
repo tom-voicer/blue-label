@@ -1,0 +1,7 @@
+---
+description: please use shadcn for components, and install them using the cli of shadcn.
+globs:
+alwaysApply: true
+---
+
+please use shadcn for components, and install them using the cli of shadcn. also use lucide for icons.

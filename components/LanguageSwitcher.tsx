@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
+import { Languages } from "lucide-react";
 
 export default function LanguageSwitcher() {
   const router = useRouter();
@@ -14,11 +15,12 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="flex items-center gap-2">
+      <Languages className="h-4 w-4 text-muted-foreground" />
       <select
         value={currentLocale}
         onChange={(e) => handleLanguageChange(e.target.value)}
-        className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-medium shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+        className="px-3 py-1.5 rounded-md border border-input bg-background text-sm font-medium cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
       >
         <option value="en">English</option>
         <option value="he">עברית</option>
