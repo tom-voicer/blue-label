@@ -20,10 +20,13 @@ export default function Home() {
         />
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-serif">
+          <div className="text-3xl sm:text-4xl md:text-5xl font-light sans-heading">
+            {t("heading")}
+          </div>
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight font-serif">
             {t("title")}
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto font-light">
             {t("subtitle")}
           </p>
         </div>

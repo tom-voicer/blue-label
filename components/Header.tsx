@@ -90,17 +90,26 @@ export default function Header() {
           {/* Mobile Menu */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="text-white">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
-                <SheetTitle>{tHero("title")}</SheetTitle>
+                <SheetTitle>
+                  <Image
+                    src="/logo.svg"
+                    alt={tHero("title")}
+                    width={800}
+                    height={608}
+                    className="h-12 w-auto"
+                    priority
+                  />
+                </SheetTitle>
               </SheetHeader>
               <Separator className="my-4" />
-              <nav className="flex flex-col gap-4">
+              <nav className="flex flex-col gap-4 px-4">
                 {menuItems.map((item) => (
                   <a
                     key={item.key}

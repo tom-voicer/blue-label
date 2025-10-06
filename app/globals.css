@@ -120,3 +120,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.font-serif {
+  letter-spacing: -0.05em;
+}
+
+.sans-heading {
+  letter-spacing: -0.07em;
+}
