@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -48,10 +49,17 @@ export default function Header() {
               e.preventDefault();
               handleMenuClick("#hero");
             }}
-            className="text-lg md:text-xl font-bold hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity"
             title={tHero("subtitle")}
           >
-            {tHero("title")}
+            <Image
+              src="/logo.svg"
+              alt={tHero("title")}
+              width={800}
+              height={608}
+              className="h-12 w-auto"
+              priority
+            />
           </a>
         </div>
 
