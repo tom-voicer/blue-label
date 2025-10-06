@@ -1,0 +1,13 @@
+{
+  "home": {
+    "title": "צור אפליקציית Next",
+    "description": "נוצר על ידי create next app",
+    "getStarted": "התחל על ידי עריכת",
+    "saveChanges": "שמור וראה את השינויים שלך מיד.",
+    "deployNow": "פרוס עכשיו",
+    "readDocs": "קרא את התיעוד",
+    "learn": "למד",
+    "examples": "דוגמאות",
+    "goToNextjs": "עבור אל nextjs.org ←"
+  }
+}
