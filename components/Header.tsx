@@ -39,6 +39,15 @@ export default function Header() {
     scrollToSection(href);
   };
 
+  const handleLogoClick = () => {
+    setOpen(false);
+    // Smooth scroll to top of page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       className={cn(
@@ -49,12 +58,8 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-8 mx-auto gap-8">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <a
-            href="#hero"
-            onClick={(e) => {
-              e.preventDefault();
-              handleMenuClick("#hero");
-            }}
+          <button
+            onClick={handleLogoClick}
             className="hover:opacity-80 transition-opacity"
             title={tHero("subtitle")}
           >
@@ -66,7 +71,7 @@ export default function Header() {
               className="h-12 w-auto"
               priority
             />
-          </a>
+          </button>
         </div>
 
         {/* Desktop Navigation */}
@@ -104,14 +109,20 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
                 <SheetTitle>
-                  <Image
-                    src={tLogo("main")}
-                    alt={tHero("title")}
-                    width={800}
-                    height={608}
-                    className="h-12 w-auto"
-                    priority
-                  />
+                  <button
+                    onClick={handleLogoClick}
+                    className="hover:opacity-80 transition-opacity"
+                    title={tHero("subtitle")}
+                  >
+                    <Image
+                      src={tLogo("main")}
+                      alt={tHero("title")}
+                      width={800}
+                      height={608}
+                      className="h-12 w-auto"
+                      priority
+                    />
+                  </button>
                 </SheetTitle>
               </SheetHeader>
               <Separator className="my-4" />
