@@ -28,7 +28,7 @@ export default function HeroSection() {
         <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto font-light">
           {t("subtitle")}
         </p>
-        <Button variant="outline" size="2xl" className="mt-8">
+        <Button variant="outline" size="2xl" className="mt-8 border-white">
           {t("bookAWarrior")}
           <MoveRight className="!size-5 rtl:rotate-180" />
         </Button>

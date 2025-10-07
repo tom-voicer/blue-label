@@ -73,7 +73,7 @@ export default function WhatYouGainSection() {
         </div>
 
         {/* Why Invite Us Section */}
-        <div className="bg-primary text-white p-12 border-b-8 border-white">
+        <div className="bg-primary text-white p-12">
           <h3 className="text-4xl font-bold mb-12 text-center font-serif">
             {t("whyInvite.title")}
           </h3>
