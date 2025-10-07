@@ -28,11 +28,89 @@ export async function generateMetadata({
   const { locale } = await params;
   const messages = await getMessages({ locale });
 
+  const title = messages.hero?.title || "The Blue Label Project";
+  const description =
+    messages.hero?.subtitle ||
+    "Bringing audiences face-to-face with wounded combat veterans who share their personal journey of injury, recovery, and renewal";
+
   return {
-    title: (messages as any).hero?.title || "The Blue Label Project",
-    description:
-      (messages as any).hero?.subtitle ||
-      "Bringing audiences face-to-face with wounded combat veterans who share their personal journey of injury, recovery, and renewal",
+    title,
+    description,
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL || "https://bluelabelproject.com"
+    ),
+    keywords: [
+      "Blue Label Project",
+      "wounded veterans",
+      "combat veterans",
+      "storytelling",
+      "inspirational speakers",
+      "veteran stories",
+      "resilience",
+      "recovery",
+      "healing through purpose",
+      "Israel veterans",
+      locale === "he" ? "פרויקט התו הכחול" : null,
+      locale === "he" ? "חיילים פצועים" : null,
+      locale === "he" ? "לוחמי קרב" : null,
+    ].filter(Boolean),
+    authors: [{ name: "Yael Man Shahar" }, { name: "Noam Friedman" }],
+    creator: "The Blue Label Project",
+    publisher: "The Blue Label Project",
+    alternates: {
+      languages: {
+        en: "/en",
+        he: "/he",
+      },
+    },
+    icons: {
+      icon: [
+        { url: "/logo.svg", type: "image/svg+xml" },
+        { url: "/logo.svg", type: "image/svg+xml", sizes: "32x32" },
+        { url: "/logo.svg", type: "image/svg+xml", sizes: "16x16" },
+      ],
+      shortcut: "/logo.svg",
+      apple: "/logo.svg",
+    },
+    manifest: "/site.webmanifest",
+    openGraph: {
+      type: "website",
+      locale: locale,
+      alternateLocale: locale === "en" ? "he" : "en",
+      url: locale === "en" ? "/en" : "/he",
+      siteName: title,
+      title,
+      description,
+      images: [
+        {
+          url: "/logo.svg",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/logo.svg"],
+      creator: "@bluelabelproject",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION,
+    },
   };
 }
 
