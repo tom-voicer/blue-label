@@ -1,4 +1,6 @@
 import { useTranslations } from "next-intl";
+import { Button } from "./ui/button";
+import { MoveRight } from "lucide-react";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
@@ -20,12 +22,16 @@ export default function HeroSection() {
         <div className="text-3xl sm:text-4xl md:text-5xl font-light sans-heading">
           {t("heading")}
         </div>
-        <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight font-serif">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight font-serif border-b-8 border-white pb-6">
           {t("title")}
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto font-light">
           {t("subtitle")}
         </p>
+        <Button variant="outline" size="2xl" className="mt-8">
+          {t("bookAWarrior")}
+          <MoveRight className="!size-5 rtl:rotate-180" />
+        </Button>
       </div>
     </section>
   );

@@ -14,11 +14,14 @@ import {
 } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTopScrolled } from "@/hooks/useTopScrolled";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   const t = useTranslations("navigation");
   const tHero = useTranslations("hero");
   const [open, setOpen] = useState(false);
+  const isScrolled = useTopScrolled();
 
   const menuItems = [
     { key: "whoWeAre", href: "#who-we-are" },
@@ -39,7 +42,12 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full">
+    <header
+      className={cn(
+        "fixed top-0 z-50 w-full transition-colors duration-300",
+        isScrolled && "bg-primary/85 backdrop-blur-sm"
+      )}
+    >
       <div className="container flex h-16 items-center justify-between px-4 md:px-8 mx-auto gap-8">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -73,7 +81,7 @@ export default function Header() {
                 e.preventDefault();
                 handleMenuClick(item.href);
               }}
-              className="text-sm font-medium transition-colors hover:underline"
+              className="text-sm font-medium transition-colors border-y-4 border-transparent py-2 hover:border-b-white"
             >
               {t(item.key)}
             </a>

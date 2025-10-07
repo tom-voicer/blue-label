@@ -10,11 +10,17 @@
   "hero": {
     "heading": "Meet the warriors of",
     "title": "The Blue Label Project",
-    "subtitle": "Bringing audiences face-to-face with wounded combat veterans who share their personal journey of injury, recovery, and renewal"
+    "subtitle": "Bringing audiences face-to-face with wounded combat veterans who share their personal journey of injury, recovery, and renewal.",
+    "bookAWarrior": "Book a Warrior"
   },
   "whoWeAre": {
     "title": "Who We Are",
-    "description": "We are a group of people who believe in the power of storytelling as a healing and unifying force and as a source of authentic knowledge. We bring presentations about real-life experiences of wounded veterans from Israel's wars. Each talk is built from real life experiences, combining inspiration with practical insights into resilience and human strength. This is the continuation of a highly successful project already happening within Israel, and now there's an exceptional opportunity for international audiences to experience it as well.",
+    "description": [
+      "We are a group of people who believe in the power of storytelling as a healing and unifying force and as a source of authentic knowledge.",
+      "We bring presentations about real-life experiences of wounded veterans from Israel's wars.",
+      "Each talk is built from real life experiences, combining inspiration with practical insights into resilience and human strength.",
+      "This is the continuation of a highly successful project already happening within Israel, and now there's an exceptional opportunity for international audiences to experience it as well."
+    ],
     "items": {
       "professionalTraining": {
         "title": "Professional Training",
@@ -31,7 +37,7 @@
     }
   },
   "whyNow": {
-    "title": "Why Now? Four Key Reasons",
+    "title": "Why Now?",
     "reasons": {
       "increaseInWoundedVeterans": {
         "title": "Increase in Wounded Veterans",

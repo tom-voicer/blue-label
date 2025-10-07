@@ -121,8 +121,15 @@
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 .font-serif {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
+}
+.font-serif.font-serif-small {
+  letter-spacing: -0.02em;
 }
 
 .sans-heading {
