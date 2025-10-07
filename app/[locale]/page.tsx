@@ -1,4 +1,5 @@
 import AudienceImageSection from "@/components/AudienceImageSection";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HugImageSection from "@/components/HugImageSection";
@@ -24,6 +25,7 @@ export default function Home() {
       <RestartImageSection />
       <OurTeamSection />
       <ScheduleMeetingSection />
+      <Footer />
     </>
   );
 }
