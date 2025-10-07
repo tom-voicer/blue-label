@@ -1,6 +1,13 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const OurTeamSection = () => {
   const t = useTranslations("ourTeam");
@@ -110,7 +117,63 @@ const OurTeamSection = () => {
           <h3 className="text-4xl font-bold mb-12 font-serif">
             {tSpeakers("title")}
           </h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden">
+            <Carousel
+              className="w-full max-w-[calc(100%-88px)] mx-auto"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent className="-mt-4">
+                {speakers.map((speaker) => (
+                  <CarouselItem key={speaker.key} className="pt-0">
+                    <div
+                      className={cn("bg-white p-6 border-b-8 border-primary")}
+                    >
+                      <div className="text-center">
+                        <div className="mb-6">
+                          <div className="w-20 h-20 bg-gray-200 overflow-hidden mx-auto">
+                            {/* Placeholder for speaker image */}
+                            <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-bold font-serif">
+                              {tSpeakers(`speakers.${speaker.key}.name`).charAt(
+                                0
+                              )}
+                            </div>
+                            {/* Uncomment when images are available */}
+                            {/* <Image
+                              src={speaker.imagePath}
+                              alt={tSpeakers(`speakers.${speaker.key}.name`)}
+                              width={80}
+                              height={80}
+                              className="w-full h-full object-cover"
+                            /> */}
+                          </div>
+                        </div>
+                        <h4 className="text-xl font-semibold mb-2 font-serif">
+                          {tSpeakers(`speakers.${speaker.key}.name`)}
+                        </h4>
+                        <p className="text-lg font-light mb-4 italic">
+                          &quot;{tSpeakers(`speakers.${speaker.key}.talkTitle`)}
+                          &quot;
+                        </p>
+                        <p className="leading-relaxed text-start text-sm">
+                          {tSpeakers(`speakers.${speaker.key}.description`)}
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {speakers.map((speaker) => (
               <div
                 key={speaker.key}
@@ -139,7 +202,7 @@ const OurTeamSection = () => {
                   <p className="text-lg font-light mb-4 italic">
                     &quot;{tSpeakers(`speakers.${speaker.key}.talkTitle`)}&quot;
                   </p>
-                  <p className="leading-relaxed text-sm">
+                  <p className="leading-relaxed text-sm text-start">
                     {tSpeakers(`speakers.${speaker.key}.description`)}
                   </p>
                 </div>
