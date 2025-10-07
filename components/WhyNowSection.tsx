@@ -30,7 +30,7 @@ export default function WhyNowSection() {
   return (
     <section
       id="why-now"
-      className="py-28 px-4 text-primary font-light"
+      className="py-28 px-6 text-primary font-light"
       style={{
         backgroundImage: "url('/whyNow_bg.png')",
         backgroundSize: "cover",
@@ -51,7 +51,7 @@ export default function WhyNowSection() {
             <div
               key={reason.key}
               className={cn(
-                "bg-white p-8 border-b-8 border-primary",
+                "bg-white sm:px-8 sm:pt-8 pb-8 border-b-8 border-primary",
                 "transition-all duration-300"
               )}
             >
@@ -60,7 +60,7 @@ export default function WhyNowSection() {
                   {index + 1}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-4 font-serif">
+                  <h3 className="text-2xl font-semibold mb-4 font-serif py-2 sm:py-0">
                     {t(reason.titleKey)}
                   </h3>
                   <p className="leading-relaxed">{t(reason.descriptionKey)}</p>

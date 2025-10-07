@@ -37,7 +37,7 @@ export default function WhatYouGainSection() {
   return (
     <section
       id="what-you-gain"
-      className="py-28 px-4 bg-white text-primary font-light"
+      className="py-28 px-6 bg-white text-primary font-light"
       style={{
         backgroundImage: "url('/whatYouGain_bg.png')",
         backgroundSize: "cover",

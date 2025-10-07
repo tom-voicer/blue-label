@@ -27,7 +27,7 @@ export default function ScheduleMeetingSection() {
   ];
 
   return (
-    <section id="schedule-meeting" className="py-28 px-4 bg-primary text-white">
+    <section id="schedule-meeting" className="py-28 px-6 bg-primary text-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Title and Description */}
         <div className="text-center mb-16">

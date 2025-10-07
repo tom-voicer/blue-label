@@ -54,7 +54,7 @@ const OurTeamSection = () => {
   return (
     <section
       id="our-team"
-      className="py-28 px-4 bg-white text-primary font-light"
+      className="py-28 px-6 bg-white text-primary font-light"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
@@ -76,7 +76,9 @@ const OurTeamSection = () => {
             {teamMembers.map((member) => (
               <div
                 key={member.key}
-                className={cn("bg-white p-8 border-b-8 border-primary")}
+                className={cn(
+                  "bg-white sm:px-8 py-8 border-b-8 border-primary"
+                )}
               >
                 <div className="flex flex-col sm:flex-row gap-6">
                   <div className="flex-shrink-0">
@@ -131,7 +133,9 @@ const OurTeamSection = () => {
                 {speakers.map((speaker) => (
                   <CarouselItem key={speaker.key} className="pt-0">
                     <div
-                      className={cn("bg-white p-6 border-b-8 border-primary")}
+                      className={cn(
+                        "bg-white py-6 px-2 border-b-8 border-primary"
+                      )}
                     >
                       <div className="text-center">
                         <div className="mb-6">

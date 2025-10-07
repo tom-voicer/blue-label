@@ -22,9 +22,9 @@ export default function LanguageSwitcher({
 
   return (
     <Button
-      variant="ghost"
+      variant="outline"
       onClick={handleLanguageToggle}
-      className={cn(className)}
+      className={cn(className, "sm:border-white")}
     >
       {currentLocale === "en" ? "עברית" : "English"}
     </Button>
