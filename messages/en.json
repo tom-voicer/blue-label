@@ -6,6 +6,10 @@
     "ourTeam": "Our Team",
     "scheduleMeeting": "Schedule Meeting"
   },
+  "logo": {
+    "main": "/logo.svg",
+    "flipped": "/logo-flipped.svg"
+  },
   "hero": {
     "heading": "Meet the warriors of",
     "title": "The Blue Label Project",
@@ -152,7 +156,12 @@
         "phone": "+972-52-476-6106"
       }
     },
-    "practicalDetails": "Practical Details: Duration 10-60 minutes | Languages: Hebrew & English | Costs adjusted according to event size, length, and format"
+    "practicalDetails": {
+      "title": "Practical Details",
+      "duration": "Duration: 10-60 minutes",
+      "languages": "Languages: Hebrew & English",
+      "costs": "Costs adjusted according to event size, length, and format"
+    }
   },
   "footer": {
     "copyright": "© 2025 The Blue Label Project. All rights reserved."

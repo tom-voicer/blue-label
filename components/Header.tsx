@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 export default function Header() {
   const t = useTranslations("navigation");
   const tHero = useTranslations("hero");
+  const tLogo = useTranslations("logo");
   const [open, setOpen] = useState(false);
   const isScrolled = useTopScrolled();
 
@@ -60,7 +61,7 @@ export default function Header() {
             title={tHero("subtitle")}
           >
             <Image
-              src="/logo-flipped.svg"
+              src={tLogo("flipped")}
               alt={tHero("title")}
               width={800}
               height={608}
@@ -106,7 +107,7 @@ export default function Header() {
               <SheetHeader>
                 <SheetTitle>
                   <Image
-                    src="/logo.svg"
+                    src={tLogo("main")}
                     alt={tHero("title")}
                     width={800}
                     height={608}

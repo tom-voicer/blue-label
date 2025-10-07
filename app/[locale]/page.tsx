@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import HugImageSection from "@/components/HugImageSection";
 import OurTeamSection from "@/components/OurTeamSection";
 import RestartImageSection from "@/components/RestartImageSection";
+import ScheduleMeetingSection from "@/components/ScheduleMeetingSection";
 import WhatYouGainSection from "@/components/WhatYouGainSection";
 import WheelchairImageSection from "@/components/WheelchairImageSection";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <WhatYouGainSection />
       <RestartImageSection />
       <OurTeamSection />
+      <ScheduleMeetingSection />
     </>
   );
 }
