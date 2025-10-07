@@ -15,7 +15,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTopScrolled } from "@/hooks/useTopScrolled";
-import { cn } from "@/lib/utils";
+import { cn, scrollToSection } from "@/lib/utils";
 
 export default function Header() {
   const t = useTranslations("navigation");
@@ -28,17 +28,15 @@ export default function Header() {
     { key: "whoWeAre", href: "#who-we-are" },
     { key: "whyNow", href: "#why-now" },
     { key: "whatYouGain", href: "#what-you-gain" },
-    { key: "ourTeam", href: "#ourTeam" },
+    { key: "ourTeam", href: "#our-team" },
+    { key: "ourSpeakers", href: "#our-speakers" },
     { key: "scheduleMeeting", href: "#schedule-meeting" },
   ];
 
   const handleMenuClick = (href: string) => {
     setOpen(false);
     // Smooth scroll to section
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollToSection(href);
   };
 
   return (

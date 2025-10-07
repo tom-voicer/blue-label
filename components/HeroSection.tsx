@@ -1,12 +1,14 @@
 import { useTranslations } from "next-intl";
-import { Button } from "./ui/button";
-import { MoveRight } from "lucide-react";
+import HeroButton from "./HeroButton";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen px-4 py-20 bg-primary text-white overflow-hidden">
+    <section
+      id="hero"
+      className="relative flex items-center justify-center min-h-screen px-4 py-20 bg-primary text-white overflow-hidden"
+    >
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
@@ -28,10 +30,7 @@ export default function HeroSection() {
         <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto font-light">
           {t("subtitle")}
         </p>
-        <Button variant="outline" size="2xl" className="mt-8 border-white">
-          {t("bookAWarrior")}
-          <MoveRight className="!size-5 rtl:rotate-180" />
-        </Button>
+        <HeroButton />
       </div>
     </section>
   );

@@ -29,6 +29,7 @@ export default function WhyNowSection() {
 
   return (
     <section
+      id="why-now"
       className="py-28 px-4 text-primary font-light"
       style={{
         backgroundImage: "url('/whyNow_bg.png')",

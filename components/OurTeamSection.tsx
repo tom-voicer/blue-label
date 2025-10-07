@@ -53,7 +53,7 @@ const OurTeamSection = () => {
 
   return (
     <section
-      id="ourTeam"
+      id="our-team"
       className="py-28 px-4 bg-white text-primary font-light"
     >
       <div className="max-w-6xl mx-auto">
@@ -113,7 +113,7 @@ const OurTeamSection = () => {
         </div>
 
         {/* Speakers Section */}
-        <div>
+        <div id="our-speakers">
           <h3 className="text-4xl font-bold mb-12 font-serif">
             {tSpeakers("title")}
           </h3>

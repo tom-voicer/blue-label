@@ -23,7 +23,10 @@ export default function WhoWeAreSection() {
   ];
 
   return (
-    <section className="py-28 px-4 bg-white text-primary font-light">
+    <section
+      id="who-we-are"
+      className="py-28 px-4 bg-white text-primary font-light"
+    >
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-12">
         {/* Start Texts */}
         <div className="sm:w-1/2">

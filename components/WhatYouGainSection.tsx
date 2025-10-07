@@ -1,11 +1,9 @@
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import { Button } from "./ui/button";
-import { MoveRight } from "lucide-react";
+import BookWarriorButton from "./BookWarriorButton";
 
 export default function WhatYouGainSection() {
   const t = useTranslations("whatYouGain");
-  const tHero = useTranslations("hero");
 
   const benefits = [
     {
@@ -38,6 +36,7 @@ export default function WhatYouGainSection() {
 
   return (
     <section
+      id="what-you-gain"
       className="py-28 px-4 bg-white text-primary font-light"
       style={{
         backgroundImage: "url('/whatYouGain_bg.png')",
@@ -91,10 +90,7 @@ export default function WhatYouGainSection() {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button size="2xl" className="mt-8 mx-auto">
-            {tHero("bookAWarrior")}
-            <MoveRight className="!size-5 rtl:rotate-180" />
-          </Button>
+          <BookWarriorButton size="2xl" className="mt-8 mx-auto" />
         </div>
       </div>
     </section>
