@@ -27,8 +27,7 @@ export default function Header() {
     { key: "whoWeAre", href: "#who-we-are" },
     { key: "whyNow", href: "#why-now" },
     { key: "whatYouGain", href: "#what-you-gain" },
-    { key: "ourTeam", href: "#our-team" },
-    { key: "ourSpeakers", href: "#our-speakers" },
+    { key: "ourTeam", href: "#ourTeam" },
     { key: "scheduleMeeting", href: "#schedule-meeting" },
   ];
 

@@ -4,7 +4,6 @@
     "whyNow": "Why Now",
     "whatYouGain": "What You Gain",
     "ourTeam": "Our Team",
-    "ourSpeakers": "Our Speakers",
     "scheduleMeeting": "Schedule Meeting"
   },
   "hero": {
@@ -86,6 +85,7 @@
   },
   "ourTeam": {
     "title": "Meet Our Team",
+    "teamMembersTitle": "Team Members",
     "members": {
       "yaelManShahar": {
         "name": "Yael Man Shahar",

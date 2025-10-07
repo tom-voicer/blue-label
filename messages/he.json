@@ -4,7 +4,6 @@
     "whyNow": "למה עכשיו",
     "whatYouGain": "מה תקבלו",
     "ourTeam": "הצוות שלנו",
-    "ourSpeakers": "הדוברים שלנו",
     "scheduleMeeting": "קביעת פגישה"
   },
   "hero": {
@@ -86,6 +85,7 @@
   },
   "ourTeam": {
     "title": "הכירו את הצוות",
+    "teamMembersTitle": "חברי הצוות",
     "members": {
       "yaelManShahar": {
         "name": "יעל מן שחר",
