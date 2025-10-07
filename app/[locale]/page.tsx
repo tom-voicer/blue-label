@@ -2,6 +2,7 @@ import AudienceImageSection from "@/components/AudienceImageSection";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HugImageSection from "@/components/HugImageSection";
+import SpeakerImageSection from "@/components/SpeakerImageSection";
 import WhatYouGainSection from "@/components/WhatYouGainSection";
 import WheelchairImageSection from "@/components/WheelchairImageSection";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <WhyNowSection />
       <HugImageSection />
       <WhatYouGainSection />
+      <SpeakerImageSection />
     </>
   );
 }

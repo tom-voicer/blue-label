@@ -28,7 +28,14 @@ export default function WhyNowSection() {
   ];
 
   return (
-    <section className="py-28 px-4 bg-primary/5 text-primary font-light">
+    <section
+      className="py-28 px-4 text-primary font-light"
+      style={{
+        backgroundImage: "url('/whyNow_bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">

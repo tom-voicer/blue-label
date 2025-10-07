@@ -37,7 +37,14 @@ export default function WhatYouGainSection() {
   ];
 
   return (
-    <section className="py-28 px-4 bg-white text-primary font-light">
+    <section
+      className="py-28 px-4 bg-white text-primary font-light"
+      style={{
+        backgroundImage: "url('/whatYouGain_bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -51,7 +58,7 @@ export default function WhatYouGainSection() {
           {benefits.map((benefit) => (
             <div
               key={benefit.key}
-              className={cn("bg-primary/5 p-8 border-b-8 border-primary")}
+              className={cn("bg-white p-8 border-b-8 border-primary")}
             >
               <div className="flex items-start gap-4">
                 <div className="flex-1">
