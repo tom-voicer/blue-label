@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HugImageSection from "@/components/HugImageSection";
 import OurTeamSection from "@/components/OurTeamSection";
+import RestartImageSection from "@/components/RestartImageSection";
 import WhatYouGainSection from "@/components/WhatYouGainSection";
 import WheelchairImageSection from "@/components/WheelchairImageSection";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyNowSection />
       <HugImageSection />
       <WhatYouGainSection />
+      <RestartImageSection />
       <OurTeamSection />
     </>
   );
