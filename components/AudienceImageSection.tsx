@@ -8,7 +8,7 @@ const AudienceImageSection = () => {
       alt="Why Now"
       width={3000}
       height={2000}
-      className="mx-auto max-h-32 sm:max-h-72 object-cover"
+      className="mx-auto h-40 sm:h-72 object-cover"
     />
   );
 };

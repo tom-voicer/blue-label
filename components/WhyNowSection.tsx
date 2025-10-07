@@ -51,11 +51,11 @@ export default function WhyNowSection() {
             <div
               key={reason.key}
               className={cn(
-                "bg-white sm:px-8 sm:pt-8 pb-8 border-b-8 border-primary",
+                "bg-white p-8 border-b-8 border-primary",
                 "transition-all duration-300"
               )}
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col sm:flex-row  gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-primary text-white flex items-center justify-center font-bold text-3xl font-serif">
                   {index + 1}
                 </div>
