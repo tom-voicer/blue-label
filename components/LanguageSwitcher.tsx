@@ -3,8 +3,13 @@
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({
+  className,
+}: {
+  className?: string;
+}) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -19,7 +24,7 @@ export default function LanguageSwitcher() {
     <Button
       variant="ghost"
       onClick={handleLanguageToggle}
-      className="text-white"
+      className={cn(className)}
     >
       {currentLocale === "en" ? "עברית" : "English"}
     </Button>

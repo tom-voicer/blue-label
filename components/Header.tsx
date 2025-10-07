@@ -84,7 +84,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           {/* Language Switcher - visible on all screen sizes */}
           <div className="hidden lg:block">
-            <LanguageSwitcher />
+            <LanguageSwitcher className="text-white" />
           </div>
 
           {/* Mobile Menu */}
