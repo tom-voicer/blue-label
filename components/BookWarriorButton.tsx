@@ -43,7 +43,7 @@ export default function BookWarriorButton({
       size={size}
       className={cn(className)}
     >
-      {t("bookAWarrior")}
+      {t("contactUs")}
       <MoveRight className="!size-5 rtl:rotate-180" />
     </Button>
   );
