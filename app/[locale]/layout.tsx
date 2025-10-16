@@ -50,7 +50,7 @@ export async function generateMetadata({
       "recovery",
       "healing through purpose",
       "Israel veterans",
-      locale === "he" ? "פרויקט התו הכחול" : null,
+      locale === "he" ? "פרויקט בלו לייבל" : null,
       locale === "he" ? "חיילים פצועים" : null,
       locale === "he" ? "לוחמי קרב" : null,
     ].filter(Boolean),
