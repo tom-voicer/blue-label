@@ -34,7 +34,7 @@ const OurTeamSection = () => {
       imagePath: "/speakers/nitzan.jpg", // placeholder path
     },
     {
-      key: "simonWasserman",
+      key: "ronWasserman",
       imagePath: "/speakers/simon.jpg", // placeholder path
     },
     {
