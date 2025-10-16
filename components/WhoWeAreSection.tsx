@@ -25,7 +25,7 @@ export default function WhoWeAreSection() {
   return (
     <section
       id="who-we-are"
-      className="py-28 px-6 bg-white text-primary font-light"
+      className="py-28 px-6 bg-light-blue text-primary font-light"
     >
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-12">
         {/* Start Texts */}
