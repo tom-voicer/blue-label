@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Inter, DM_Serif_Display } from "next/font/google";
+import { Inter, DM_Serif_Display, Assistant } from "next/font/google";
 import "../globals.css";
 
 const inter = Inter({
@@ -14,6 +14,12 @@ const dmSerifDisplay = DM_Serif_Display({
   variable: "--font-dm-serif",
   subsets: ["latin"],
   weight: ["400"],
+});
+
+const assistant = Assistant({
+  variable: "--font-dm-serif", // Use the same variable name for consistent font-serif class
+  subsets: ["latin", "hebrew"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export function generateStaticParams() {
@@ -132,11 +138,12 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  // Use Assistant font for Hebrew, DM_Serif_Display for English
+  const serifFont = locale === "he" ? assistant : dmSerifDisplay;
+
   return (
     <html lang={locale} dir={locale === "he" ? "rtl" : "ltr"}>
-      <body
-        className={`${inter.variable} ${dmSerifDisplay.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${serifFont.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
