@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const OurTeamSection = () => {
   const t = useTranslations("ourTeam");
@@ -16,38 +17,38 @@ const OurTeamSection = () => {
   const teamMembers = [
     {
       key: "yaelManShahar",
-      imagePath: "/team/yael.jpg", // placeholder path
+      imagePath: "/people/yael.png",
     },
     {
       key: "noamFriedman",
-      imagePath: "/team/noam.jpg", // placeholder path
+      imagePath: "/people/noam.jpg",
     },
   ];
 
   const speakers = [
     {
       key: "noamFriedman",
-      imagePath: "/speakers/noamf.jpg", // placeholder path
+      imagePath: "/people/noam.jpg",
     },
     {
       key: "nitzanLevy",
-      imagePath: "/speakers/nitzan.jpg", // placeholder path
+      imagePath: "/people/nitzan.jpg",
     },
     {
       key: "ronWasserman",
-      imagePath: "/speakers/simon.jpg", // placeholder path
+      imagePath: "/people/ron.jpg",
     },
     {
       key: "avishaiShoshani",
-      imagePath: "/speakers/avishai.jpg", // placeholder path
+      imagePath: "/people/avishai.jpg",
     },
     {
       key: "elioorDor",
-      imagePath: "/speakers/elioor.jpg", // placeholder path
+      imagePath: "/people/elioor.jpg",
     },
     {
       key: "odedMiraz",
-      imagePath: "/speakers/oded.jpg", // placeholder path
+      imagePath: "/people/oded.jpg",
     },
   ];
 
@@ -84,17 +85,17 @@ const OurTeamSection = () => {
                   <div className="flex-shrink-0">
                     <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-200 overflow-hidden">
                       {/* Placeholder for team member image */}
-                      <div className="w-full h-full bg-primary flex items-center justify-center text-white text-2xl font-bold font-serif">
+                      {/* <div className="w-full h-full bg-primary flex items-center justify-center text-white text-2xl font-bold font-serif">
                         {t(`members.${member.key}.name`).charAt(0)}
-                      </div>
+                      </div> */}
                       {/* Uncomment when images are available */}
-                      {/* <Image
+                      <Image
                         src={member.imagePath}
                         alt={t(`members.${member.key}.name`)}
                         width={128}
                         height={128}
                         className="w-full h-full object-cover"
-                      /> */}
+                      />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -141,19 +142,19 @@ const OurTeamSection = () => {
                         <div className="mb-6">
                           <div className="w-20 h-20 bg-gray-200 overflow-hidden mx-auto">
                             {/* Placeholder for speaker image */}
-                            <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-bold font-serif">
+                            {/* <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-bold font-serif">
                               {tSpeakers(`speakers.${speaker.key}.name`).charAt(
                                 0
                               )}
-                            </div>
+                            </div> */}
                             {/* Uncomment when images are available */}
-                            {/* <Image
+                            <Image
                               src={speaker.imagePath}
                               alt={tSpeakers(`speakers.${speaker.key}.name`)}
                               width={80}
                               height={80}
                               className="w-full h-full object-cover"
-                            /> */}
+                            />
                           </div>
                         </div>
                         <h4 className="text-xl font-semibold mb-2 font-serif">
@@ -187,17 +188,17 @@ const OurTeamSection = () => {
                   <div className="mb-6">
                     <div className="w-20 h-20 bg-gray-200 overflow-hidden mx-auto">
                       {/* Placeholder for speaker image */}
-                      <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-bold font-serif">
+                      {/* <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-bold font-serif">
                         {tSpeakers(`speakers.${speaker.key}.name`).charAt(0)}
-                      </div>
+                      </div> */}
                       {/* Uncomment when images are available */}
-                      {/* <Image
+                      <Image
                         src={speaker.imagePath}
                         alt={tSpeakers(`speakers.${speaker.key}.name`)}
                         width={80}
                         height={80}
                         className="w-full h-full object-cover"
-                      /> */}
+                      />
                     </div>
                   </div>
                   <h4 className="text-xl font-semibold mb-2 font-serif">
