@@ -44,7 +44,7 @@ const OurTeamSection = () => {
     },
     {
       key: "elioorDor",
-      imagePath: "/people/elioor.jpg",
+      imagePath: "/people/elioor.png",
     },
     {
       key: "odedMiraz",
@@ -84,17 +84,12 @@ const OurTeamSection = () => {
                 <div className="flex flex-col sm:flex-row gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-200 overflow-hidden">
-                      {/* Placeholder for team member image */}
-                      {/* <div className="w-full h-full bg-primary flex items-center justify-center text-white text-2xl font-bold font-serif">
-                        {t(`members.${member.key}.name`).charAt(0)}
-                      </div> */}
-                      {/* Uncomment when images are available */}
                       <Image
                         src={member.imagePath}
                         alt={t(`members.${member.key}.name`)}
                         width={128}
                         height={128}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover team-filter"
                       />
                     </div>
                   </div>
@@ -141,19 +136,12 @@ const OurTeamSection = () => {
                       <div className="text-center">
                         <div className="mb-6">
                           <div className="w-20 h-20 bg-gray-200 overflow-hidden mx-auto">
-                            {/* Placeholder for speaker image */}
-                            {/* <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-bold font-serif">
-                              {tSpeakers(`speakers.${speaker.key}.name`).charAt(
-                                0
-                              )}
-                            </div> */}
-                            {/* Uncomment when images are available */}
                             <Image
                               src={speaker.imagePath}
                               alt={tSpeakers(`speakers.${speaker.key}.name`)}
                               width={80}
                               height={80}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover team-filter"
                             />
                           </div>
                         </div>
@@ -187,17 +175,12 @@ const OurTeamSection = () => {
                 <div className="text-center">
                   <div className="mb-6">
                     <div className="w-20 h-20 bg-gray-200 overflow-hidden mx-auto">
-                      {/* Placeholder for speaker image */}
-                      {/* <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-bold font-serif">
-                        {tSpeakers(`speakers.${speaker.key}.name`).charAt(0)}
-                      </div> */}
-                      {/* Uncomment when images are available */}
                       <Image
                         src={speaker.imagePath}
                         alt={tSpeakers(`speakers.${speaker.key}.name`)}
                         width={80}
                         height={80}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover team-filter"
                       />
                     </div>
                   </div>

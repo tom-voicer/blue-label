@@ -137,3 +137,7 @@ button {
 .sans-heading {
   letter-spacing: -0.07em;
 }
+
+.team-filter {
+  filter: brightness() saturate(0%) invert(18%) sepia(100%) saturate(180%) hue-rotate(204deg) brightness(105%) contrast(150%);
+}
