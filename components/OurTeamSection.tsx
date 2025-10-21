@@ -17,38 +17,38 @@ const OurTeamSection = () => {
   const teamMembers = [
     {
       key: "yaelManShahar",
-      imagePath: "/people/yael.png",
+      imagePath: "/people/yael-draw.png",
     },
     {
       key: "noamFriedman",
-      imagePath: "/people/noam.jpg",
+      imagePath: "/people/noam-draw.png",
     },
   ];
 
   const speakers = [
     {
       key: "noamFriedman",
-      imagePath: "/people/noam.jpg",
+      imagePath: "/people/noam-draw.png",
     },
     {
       key: "nitzanLevy",
-      imagePath: "/people/nitzan.jpg",
+      imagePath: "/people/nitzan-draw.png",
     },
     {
       key: "ronWasserman",
-      imagePath: "/people/ron.jpg",
+      imagePath: "/people/ron-draw.jpg",
     },
     {
       key: "avishaiShoshani",
-      imagePath: "/people/avishai.jpg",
+      imagePath: "/people/avishai-draw.png",
     },
     {
       key: "elioorDor",
-      imagePath: "/people/elioor.png",
+      imagePath: "/people/elioor-draw.png",
     },
     {
       key: "odedMiraz",
-      imagePath: "/people/oded.jpg",
+      imagePath: "/people/oded-draw.png",
     },
   ];
 
@@ -83,13 +83,13 @@ const OurTeamSection = () => {
               >
                 <div className="flex flex-col sm:flex-row gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-200 overflow-hidden">
+                    <div className="w-24 h-24 sm:w-32 sm:h-32  overflow-hidden">
                       <Image
                         src={member.imagePath}
                         alt={t(`members.${member.key}.name`)}
                         width={128}
                         height={128}
-                        className="w-full h-full object-cover team-filter"
+                        className="w-full h-full object-cover rounded-full team-filter"
                       />
                     </div>
                   </div>
@@ -135,13 +135,13 @@ const OurTeamSection = () => {
                     >
                       <div className="text-center">
                         <div className="mb-6">
-                          <div className="w-20 h-20 bg-gray-200 overflow-hidden mx-auto">
+                          <div className="w-20 h-20  overflow-hidden mx-auto">
                             <Image
                               src={speaker.imagePath}
                               alt={tSpeakers(`speakers.${speaker.key}.name`)}
                               width={80}
                               height={80}
-                              className="w-full h-full object-cover team-filter"
+                              className="w-full h-full object-cover rounded-full team-filter"
                             />
                           </div>
                         </div>
@@ -174,13 +174,13 @@ const OurTeamSection = () => {
               >
                 <div className="text-center">
                   <div className="mb-6">
-                    <div className="w-20 h-20 bg-gray-200 overflow-hidden mx-auto">
+                    <div className="w-20 h-20  overflow-hidden mx-auto">
                       <Image
                         src={speaker.imagePath}
                         alt={tSpeakers(`speakers.${speaker.key}.name`)}
                         width={80}
                         height={80}
-                        className="w-full h-full object-cover team-filter"
+                        className="w-full h-full object-cover rounded-full team-filter"
                       />
                     </div>
                   </div>
