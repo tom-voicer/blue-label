@@ -83,7 +83,7 @@ const OurTeamSection = () => {
               >
                 <div className="flex flex-col sm:flex-row gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 sm:w-32 sm:h-32  overflow-hidden">
+                    <div className="w-24 h-24 sm:w-32 sm:h-32 overflow-hidden">
                       <Image
                         src={member.imagePath}
                         alt={t(`members.${member.key}.name`)}
@@ -149,7 +149,8 @@ const OurTeamSection = () => {
                           {tSpeakers(`speakers.${speaker.key}.name`)}
                         </h4>
                         <p className="text-lg font-light mb-4 italic">
-                          &quot;{tSpeakers(`speakers.${speaker.key}.talkTitle`)}
+                          &quot;
+                          {tSpeakers(`speakers.${speaker.key}.talkTitle`)}
                           &quot;
                         </p>
                         <p className="leading-relaxed text-start text-sm">
