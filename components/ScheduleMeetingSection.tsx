@@ -39,39 +39,41 @@ export default function ScheduleMeetingSection() {
           </p>
         </div>
 
-        {/* Meeting Buttons */}
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-20">
-          <Button
-            size="2xl"
-            variant="flipped"
-            className="w-full md:w-auto min-w-80"
-            asChild
-          >
-            <a
-              href="https://calendly.com/bluelabelproject/east-time"
-              target="_blank"
-              rel="noopener noreferrer"
+        {/* Meeting Buttons (HIDDEN) */}
+        {false && (
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-20">
+            <Button
+              size="2xl"
+              variant="flipped"
+              className="w-full md:w-auto min-w-80"
+              asChild
             >
-              <Calendar className="size-6" />
-              {t("scheduleEastern")}
-            </a>
-          </Button>
-          <Button
-            size="2xl"
-            variant="flipped"
-            className="w-full md:w-auto min-w-80"
-            asChild
-          >
-            <a
-              href="https://calendly.com/bluelabelproject/israel-time"
-              target="_blank"
-              rel="noopener noreferrer"
+              <a
+                href="https://calendly.com/bluelabelproject/east-time"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Calendar className="size-6" />
+                {t("scheduleEastern")}
+              </a>
+            </Button>
+            <Button
+              size="2xl"
+              variant="flipped"
+              className="w-full md:w-auto min-w-80"
+              asChild
             >
-              <Calendar className="size-6" />
-              {t("scheduleIsrael")}
-            </a>
-          </Button>
-        </div>
+              <a
+                href="https://calendly.com/bluelabelproject/israel-time"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Calendar className="size-6" />
+                {t("scheduleIsrael")}
+              </a>
+            </Button>
+          </div>
+        )}
 
         {/* Contact Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
