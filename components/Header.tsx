@@ -59,8 +59,8 @@ export default function Header() {
         {/* Logo */}
         <div
           className={cn(
-            "flex items-center gap-2 transition-transform",
-            !isScrolled && "scale-150 translate-y-1/3"
+            "flex items-center gap-2 transition-transform start-4 sm:start-0 relative",
+            !isScrolled && "scale-150 translate-y-1/3 "
           )}
         >
           <button
@@ -116,7 +116,7 @@ export default function Header() {
                 <SheetTitle>
                   <button
                     onClick={handleLogoClick}
-                    className="hover:opacity-80 transition-opacity"
+                    className="hover:opacity-80 transition-opacity relative top-8"
                     title={tHero("subtitle")}
                   >
                     <Image
