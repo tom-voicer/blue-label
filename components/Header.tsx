@@ -57,7 +57,12 @@ export default function Header() {
     >
       <div className="container flex h-16 items-center justify-between px-4 md:px-8 mx-auto gap-8">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div
+          className={cn(
+            "flex items-center gap-2 transition-transform",
+            !isScrolled && "scale-150 translate-y-1/3"
+          )}
+        >
           <button
             onClick={handleLogoClick}
             className="hover:opacity-80 transition-opacity"
